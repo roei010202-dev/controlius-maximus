@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --font-scale: 1; }
+html { font-size: calc(16px * var(--font-scale)); }
+body { @apply bg-canvas text-ink font-sans antialiased; }
+
+/* Visible keyboard focus everywhere (ת"י 5568 / WCAG 2.4.7) */
+:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; border-radius: 6px; }
+
+.skip-link { @apply absolute -top-20 right-4 z-50 rounded-lg bg-signal px-4 py-2 font-semibold text-ink; }
+.skip-link:focus { @apply top-3; }
+
+/* Accessibility menu modes */
+html.a11y-contrast body { background: #fff; }
+html.a11y-contrast .text-muted { color: #1f2937 !important; }
+html.a11y-contrast .border-line { border-color: #4b5563 !important; }
+html.a11y-links a { text-decoration: underline !important; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+html.a11y-nomotion *, html.a11y-nomotion *::before, html.a11y-nomotion *::after { transition: none !important; animation: none !important; }
+
+.num { font-variant-numeric: tabular-nums; }
