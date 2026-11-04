@@ -159,7 +159,7 @@ export default function Layout() {
           <button className="rounded-xl p-2 hover:bg-ink-600 lg:hidden" onClick={() => setMenu(!menu)} aria-expanded={menu} aria-controls="main-nav" aria-label="תפריט ניווט">
             {menu ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
-          <Link to="/" aria-label="C.M – דף הבית"><Logo light /></Link>
+          <Link to="/"><Logo light /><span className="sr-only"> – דף הבית</span></Link>
           <nav id="main-nav" aria-label="ניווט ראשי" className={`${menu ? 'flex' : 'hidden'} absolute inset-x-0 top-full flex-col gap-1 bg-ink p-3 lg:static lg:flex lg:flex-row lg:bg-transparent lg:p-0 lg:ms-6`}>
             {nav.map((n) => (
               <NavLink key={n.to} to={n.to} className={linkCls} onClick={() => setMenu(false)}>
