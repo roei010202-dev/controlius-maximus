@@ -9,7 +9,7 @@ function Shell({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="min-h-screen">
       <a href="#main" className="skip-link">דילוג לתוכן הראשי</a>
-      <header className="bg-ink px-4 py-3"><div className="mx-auto flex max-w-3xl items-center justify-between"><Link to="/" aria-label="C.M – דף הבית"><Logo light /></Link><A11yMenu /></div></header>
+      <header className="bg-ink px-4 py-3"><div className="mx-auto flex max-w-3xl items-center justify-between"><Link to="/"><Logo light /><span className="sr-only"> – דף הבית</span></Link><A11yMenu /></div></header>
       <main id="main" className="mx-auto max-w-3xl px-4 py-8">
         <Link to="/" className="mb-4 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"><ArrowRight aria-hidden className="h-4 w-4" />חזרה למערכת</Link>
         <article className="rounded-2xl border border-line bg-white p-6 shadow-card sm:p-8 [&_h2]:mb-2 [&_h2]:mt-6 [&_h2]:text-lg [&_h2]:font-bold [&_li]:mb-1 [&_p]:mb-3 [&_p]:leading-relaxed [&_ul]:mb-3 [&_ul]:list-disc [&_ul]:ps-5">
